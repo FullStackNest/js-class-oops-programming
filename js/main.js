@@ -43,14 +43,14 @@ Car.model('BMW', 'EV-160', 'Electric')
 
 
 class Insert {
-    #data = [];
+    #data = []; // private variable
     addToData(value) {
         const list = this.#data.push(value);
         this.#data;
         return this.#render(this.#data)
     }
 
-    #render(data) {
+    #render(data) { // private methods
         let items = ``;
         data.forEach((item, index) => {
             items += `<h2>${index + 1}. ${item}</h2>`
